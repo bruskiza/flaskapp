@@ -7,6 +7,6 @@ It uses:
 - poetry
 - pytest-flask
 
-# Developer setup
+## Developer setup
 
 `make`
