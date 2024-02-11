@@ -21,6 +21,16 @@ test:
 
 cover:
 	poetry run pytest --cov=src/ --cov-report=html --cov-report=term
+	poetry run coverage xml -o coverage.xml
 
 run:
 	poetry run python src/flaskapp/app.py
+
+sonar:
+	@sonar-scanner \
+  -Dsonar.projectKey=flaskapp \
+  -Dsonar.sources=src/ \
+  -Dsonar.tests=tests/ \
+  -Dsonar.host.url=$SERVER \
+  -Dsonar.token=$TOKEN
+  -Dsonar.python.coverage.reportPaths=coverage.xml
