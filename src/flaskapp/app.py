@@ -1,10 +1,8 @@
-# src/app.py
+# Sample Flask App
 from flask import Flask
 
 def create_app():
     app = Flask(__name__)
-
-    # Set configurations or initialize extensions here if needed
 
     @app.route('/')
     def hello_world():
