@@ -10,6 +10,6 @@ def create_app():
 
     return app
 
-if __name__ == '__main__':      # pragma: no cover
+if __name__ == '__main__':          # pragma: no cover
     # If the script is executed directly, run the app
-    create_app().run(debug=True)
+    create_app().run(debug=True)    # pragma: no cover
